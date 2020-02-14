@@ -1,0 +1,300 @@
+:root {
+    --primCol: #3cb878;
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Verdana;
+}
+
+.main {
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+
+.navigation {
+    display: flex;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    padding: 18px 0;
+    justify-content: space-between;
+}
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+#logo {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#logo:hover {
+    color: var(--primCol);
+}
+
+.icons-and-login-section-icons{
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.icons-and-login-section-icon i{
+    margin-left: 15px;
+    font-size: 18px;
+}
+
+.icons-and-login-section-icon:hover {
+    color: var(--primCol);
+}
+
+.welcome-and-links-section{
+    display: inline-block;
+    color: white;
+}
+
+.welcome-and-links-section-link {
+    color: var(--primCol)!important;
+}
+
+.welcome-and-links-section-link:hover {
+    text-decoration: underline;
+}
+
+
+
+.register-panel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.register-panel {
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: white;
+    padding: 30px 55px;
+}
+
+.register-panel-top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 18px;
+}
+
+.register-panel-top-signup {
+    position: relative;
+    font-size: 20px;
+    align-self: baseline;
+}
+.register-panel-top-signup:before{
+    content: '';
+    padding: 9px;
+    background-color: var(--primCol);
+    position: absolute;
+    left: -56px;
+}
+
+.register-panel-top-login {
+    font-size: 14px;
+    color: var(--primCol);
+    align-self: baseline;
+    text-decoration: none;
+}
+
+.register-panel-top-login:hover {
+    text-decoration: underline;
+}
+
+.facebook {
+    padding: 13px 0px;
+    width: 160px;
+    background-color: #305db8;
+    border-radius: 3px;
+    border: none;
+}
+
+.facebook:hover {
+    background-color: #264b96;
+}
+
+.fa-facebook-f {
+    padding-right: 15px;
+    font-size: 20px;
+    color: white;
+    position: relative;
+}
+
+.fa-facebook-f:after{
+    content: '';
+    border-right: 1px solid #2b54a5;
+    position: absolute;
+    display: inline-block;
+    height: 28px;
+    bottom: -5px;
+    left: 25px;
+    margin-right: 10px;
+}
+
+.facebook-text {
+     color: white;
+     font-size: 16px;
+     margin-left: 10px;
+ }
+
+.google {
+    width: 160px;
+    padding: 13px 0px;
+    background-color: #df4a32;
+    border: none;
+    border-radius: 3px;
+}
+
+.google:hover {
+    background-color: #c3412c;
+}
+
+.fa-google-plus-g {
+    padding-right: 15px;
+    font-size: 20px;
+    color: white;
+    position: relative;
+}
+
+.fa-google-plus-g:before {
+    margin-left: -22px;
+}
+
+.fa-google-plus-g:after{
+    content: '';
+    border-right: 1px solid #c8422d;
+    position: absolute;
+    display: inline-block;
+    height: 28px;
+    bottom: -5px;
+    left: 12px;
+    margin-right: 10px;
+}
+
+.google-text {
+    color: white;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+
+
+.seperator {
+    display: flex;
+    padding-top: 20px;
+    margin-bottom: 11px;
+}
+
+.line {
+    border: 1px solid #eaeaea;
+    width: 145px;
+    opacity: 0.7;
+}
+
+.or-text {
+    color: gray;
+    padding: 0 10px;
+}
+
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.enter-text {
+    padding: 13px 0;
+    padding-left: 19px;
+    margin-bottom: 10px;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    color: gray;
+}
+
+input:focus {
+    outline: 0;
+}
+
+button:focus {
+    outline: 0;
+}
+
+input[type=text]:focus {
+    box-shadow: 3px 3px lightgray;
+    color: black;
+}
+
+.checkbox-container {
+    margin-bottom: 20px;
+}
+
+.agreement {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}
+
+.terms-conditions {
+    color: var(--primCol);
+    text-decoration: none;
+    padding-left: 5px;
+}
+
+.terms-conditions:hover {
+    text-decoration: underline;
+}
+
+.create-account {
+    display: flex;
+}
+
+.create-account-button {
+    background-color: var(--primCol);
+    padding: 15px 0;
+    width: 325px;
+    border-radius: 4px;
+    border: none;
+}
+
+.create-account-button:hover {
+    background-color: #329a65;
+}
+
+.create-account-text {
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
