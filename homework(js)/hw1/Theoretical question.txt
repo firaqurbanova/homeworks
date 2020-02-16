@@ -1,0 +1,5 @@
+1.Var keyword was used in old version of javascript.Var variables can be re-declared and updated. Re-declaring can cause some problems in the code. Var is initialized as undefined while let keyword is not initialized. Var declarations are globally or function scoped.
+Let is more preferred for variable declarations.Let can be updated but cannot be declared more than once within a scope. This feature solves the problem which happens with the using of var. Let is block scoped.
+Const declarations are used for constant values.İn contrast to the let const cannot be updated.Const is block scoped.
+2.While using var you need to pay attention naming of variables.If you redefine the same variable it can cause bugs in code.
+So, let is more preferred.
