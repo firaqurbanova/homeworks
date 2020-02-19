@@ -1,0 +1,1 @@
+Object method defines the behaviour of the objects.It is an action than an object is able to perform. A method is function which is called by a name that is related to object. 
