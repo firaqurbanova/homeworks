@@ -1,0 +1,2 @@
+1.If we want our code to perform a common task many times function gives us opportunity that declare it once and then use it whole code. So it helps to save time. Also using function makes our program compact and more understandable.
+2.The argument is a value that is passed to the function when it is called. On the calling side it is an argument, on the function side it is parameter. When calling function we send variables to the function and function put them in appropriate places for performing current task.
