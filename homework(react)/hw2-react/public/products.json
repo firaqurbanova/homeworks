@@ -1,0 +1,69 @@
+{
+    "products": [{
+        "name": "Oh my Deer",
+        "price": "$14.99",
+        "imgUrl": "img/image.png",
+        "number": 2,
+        "color": "red"
+    }, 
+    {    "name": "Awaken the Hero",
+        "price": "$15",
+        "imgUrl": "img/image@1X (2).png",
+        "number": 1,
+        "color": "red"
+
+    },
+    {
+        "name": "Oh my Deer",
+        "price": "$16",
+        "imgUrl": "img/image@1X (3).png",
+        "number": 3,
+        "color": "red"
+    },
+    {
+        "name": "Ravenna",
+        "price": "$17",
+        "imgUrl": "img/image@1X (4).png",
+        "number": 4,
+        "color": "red"
+    },
+    {
+        "name": "Caribou",
+        "price": "$18",
+        "imgUrl": "img/image@1X (5).png",
+        "number": 5,
+        "color": "red"
+    },
+    {
+        "name": "Aqualung",
+        "price": "$19",
+        "imgUrl": "img/clipart-crossed-eyes-1.png",
+        "color": "red"
+    },
+    {
+        "name": "Strange to ears",
+        "price": "$20",
+        "imgUrl": "img/0.png",
+        "number": 7,
+        "color": "red"
+    },
+    {
+        "name": "Back from the grave",
+        "price": "$21",
+        "imgUrl": "img/Image@1X.png",
+        "number": 8,
+        "color": "red"
+    },
+    {
+        "name": "123",
+        "price": "$22",
+        "imgUrl": "img/no-album.jpg",
+        "number": 9,
+        "color": "red"
+    },
+    { "name": "A",
+        "price": "$23",
+        "imgUrl": "img/unnamed (1).jpg",
+        "number": 10,
+        "color": "red"}
+    ]}

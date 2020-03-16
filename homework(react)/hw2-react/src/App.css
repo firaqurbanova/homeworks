@@ -1,0 +1,78 @@
+.products-container{
+    
+    overflow: hidden;
+    margin: 0 auto;
+    width: 1000px;
+    text-align: center;
+   
+    
+}
+.img{
+  height: 230px;
+  width: 230px;
+  border-radius: 4px;
+  margin-bottom: 0px;
+  margin-right: 8px;
+  /* text-align: center; */
+}
+.ProductCard{
+  background-color: #ffffff;
+  margin-right: 10px;
+  border: 1px solid grey;
+  width: 230px;
+  display: inline-block;
+  /* text-align: center; */
+  margin-bottom: 8px;
+}
+.all{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.name-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  
+}
+.name{
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  
+}
+.artist{
+  justify-content: space-between;
+}
+.price-and-btn{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  
+}
+.musica{
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 10px;
+
+}
+.btn{
+  width: 130px;
+  height: 20px;
+  cursor: pointer;
+}
+.close-btn{
+    background-color: #D44637;
+    color: white;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 10px;
+}
+
+.modal-text{
+  margin-top: 50px;
+}
+
+
