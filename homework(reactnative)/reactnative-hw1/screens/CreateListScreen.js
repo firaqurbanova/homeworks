@@ -22,7 +22,7 @@ export const CreateListScreen = connect(mapStateToProps, {
     const [fields, setFields] = useState({
         listID: "",
         name: "",
-        type: "",
+        type: "regular",
         products: {},
     });
 
@@ -50,11 +50,11 @@ export const CreateListScreen = connect(mapStateToProps, {
 
             addList(args);
             if (args.type === "regular") {
-                navigation.navigate("Regular List", {});
+                navigation.navigate("Regular List");
 
             }
             else {
-                navigation.navigate("One Time List",{});
+                navigation.navigate("One Time List");
             }
         }
         // console.log(args.name);
@@ -90,7 +90,7 @@ export const CreateListScreen = connect(mapStateToProps, {
                             <Text style={{ fontWeight: type === 'regular' ? 'bold' : '400' }}>Regular</Text>
                         </TouchableOpacity>
                     </View>
-                    <CustomBtn title="CREATE LIST" onPress={handleAdd(type)} />
+                    <CustomBtn title="CREATE LIST" onPress={()=>handleAdd(type)} />
 
                 </View>
             </View>

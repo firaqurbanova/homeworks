@@ -14,30 +14,29 @@ const mapStateToProps = (state) => ({
     lists: getLists(state),
 })
 
-export const Homepage2Screen = connect(mapStateToProps, { deleteList })((props) => {
+export const Homepage2Screen = connect (mapStateToProps, {deleteList})((props) => {
     // const navigation=useNavigation();
 
-    const { lists, navigation, deleteList } = props;
+    const {lists,navigation,deleteList}=props;
     // const {top}=useSafeArea();
-    const list = lists.filter((item) => item.type === "regular");
-
-    const deleteListHandler = (itemID) => {
+    const list = lists.filter((list) => list.type === "regular");
+    const deleteListHandler = (listID) => {
         Alert.alert(
             'Delete Confirmation',
             'Are you sure want to delete?',
             [
-                {
-                    text: 'Yes',
-                    onPress: () => deleteList({ itemID }),
-                },
-                {
-                    text: 'Cancel',
-                    onPress: () => console.log('Cancel Pressed'),
-                    style: 'cancel'
-                }
+              {
+                text: 'Yes',
+                onPress: () => deleteList({ listID }),
+              },
+              {
+                text: 'Cancel',
+                onPress: () => console.log('Cancel Pressed'),
+                style: 'cancel'
+              }
             ],
-
-        );
+            
+          );
     }
     return (
         <View style={styles.container}>

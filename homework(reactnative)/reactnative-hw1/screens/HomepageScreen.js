@@ -20,7 +20,7 @@ export const HomepageScreen =  connect (mapStateToProps, {deleteList})((props)=>
     const {lists,navigation,deleteList}=props;
     // const {top}=useSafeArea();
     const list = lists.filter((list) => list.type === "onetime");
-    const deleteListHandler = (listId) => {
+    const deleteListHandler = (listID) => {
         Alert.alert(
             'Delete Confirmation',
             'Are you sure want to delete?',
