@@ -22,7 +22,7 @@ export const SingleProduct = ({ history: { push }, match: { params: { id } } }) 
                     Are you sure?
                     <Close onClick={() => push('/products')}>X</Close>
                     <Image border={product.color} src={product.image}  />
-                    
+                   
                     <h1>{product.name}</h1>
                     <h2>{product.price}</h2>
                     
