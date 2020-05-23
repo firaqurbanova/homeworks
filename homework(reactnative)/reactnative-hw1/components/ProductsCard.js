@@ -10,7 +10,8 @@ export const ProductsCard = ({ name, count, unit, bought, listID, productID }) =
         <TouchableOpacity style={styles.productsCard}
             onPress={() => {
                 navigation.navigate("Single List", { listID, productID });
-            }}>
+            }}
+            >
             <View style={[styles.products, { opacity: bought ? 0.5 : 1 }]}>
                 <CustomText style={styles.name}>{name}</CustomText>
                 <CustomText style={styles.count}>x{count} {unit}</CustomText>

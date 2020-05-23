@@ -4,13 +4,12 @@ const RESET_PRODUCTS="RESET_PRODUCTS"
 const DELETE_LIST = "DELETE_LIST";
 const UPDATE_INFO = "UPDATE_INFO"
 const DELETE_PRODUCT = "DELETE_PRODUCT"
-const UPDATE_LIST = "UPDATE_LIST"
 const UPDATE_PRODUCT = "UPDATE_PRODUCT"
 
 // SELECTORS
 const MODULE_NAME = "data";
 export const getLists = (state) => state[MODULE_NAME].lists;
-export const getUserInfo = (state) => state[MODULE_NAME].userInfo;
+// export const getUserInfo = (state) => state[MODULE_NAME].userInfo;
 
 // REDUCER
 
@@ -97,7 +96,7 @@ const initialState = {
         products : [
             { 
                 id: createID(), 
-                name: "Pasta", 
+                name: "Past", 
                 count: 2, 
                 unit: "pkg", 
                 bought:true,
@@ -139,8 +138,8 @@ export function dataReducer(state = initialState, { type, payload }) {
           ...state.lists,
           {
             id: createID(),
-            name: payload.name,
-            type: payload.type,
+            name: payload,
+            type: payload,
             products: [],
           },
         ],
@@ -174,26 +173,26 @@ export function dataReducer(state = initialState, { type, payload }) {
           lists: state.lists.filter((list)=>list.id!==payload.listID),
         };
 
-      // case RESET_PRODUCTS:
-      //   return{
-      //     ...state,
-      //     lists:
-      //     state.lists.map((list)=>{
-      //       if(list.id===payload.listID){
-      //         return{
-      //           ...list,
-      //           products:
-      //           list.products.map((item)=>{
-      //             return{
-      //               ...item,
-      //               bought:false,
-      //             };
-      //           }),
-      //         };
-      //       }
-      //       return list;
-      //     }),
-      //   };
+      case RESET_PRODUCTS:
+        return{
+          ...state,
+          lists:
+          state.lists.map((list)=>{
+            if(list.id===payload.listID){
+              return{
+                ...list,
+                products:
+                list.products.map((item)=>{
+                  return{
+                    ...item,
+                    bought:false,
+                  };
+                }),
+              };
+            }
+            return list;
+          }),
+        };
       //   case UPDATE_INFO:
       //     return{
       //         ...state,
@@ -203,6 +202,52 @@ export function dataReducer(state = initialState, { type, payload }) {
       //             imageUri: payload.imageUri,
       //         },
       //     };
+
+      case DELETE_PRODUCT:
+        return{
+          ...state,
+          lists:state.lists.map((list)=>{
+            if(list.id===payload.listID){
+              return{
+                  ...list,
+                  products:list.products.filter(
+                    (product)=>product.id!==payload.productID
+                  )
+              }
+            }
+            return list;
+          })
+        };
+
+        case UPDATE_PRODUCT:
+      return {
+        ...state,
+        lists: state.lists.map((list) => {
+          if (list.id === payload.listID) {
+            return {
+              ...list,
+                    products: project.products.map((product) => {
+                      if (product.id === payload.productID) {
+                        return {
+                          ...product,
+                          name:payload.name,
+                          unit:payload.unit,
+                          count:payload.count,
+                        };
+                      }
+                      return product;
+                    }),
+                  };
+                }
+                return list;
+              }),
+            };
+          
+          
+      
+
+
+
     default:
       return state;
   }
@@ -228,6 +273,14 @@ export const deleteList=(payload)=>({
 // });
 // export const updateInfo=(payload)=>({
 //   type:UPDATE_INFO,
+//   payload,
+// });
+// export const deleteProduct=(payload)=>({
+//   type:DELETE_PRODUCT,
+//   payload,
+// });
+// export const updateProduct=(payload)=>({
+//   type:UPDATE_PRODUCT,
 //   payload,
 // });
 

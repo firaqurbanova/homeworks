@@ -16,49 +16,66 @@ const mapStateToProps = (state) => ({
 
 export const CreateListScreen = connect(mapStateToProps, {
     addList
-})(({ addList, navigation, lists }) => {
+})(({ addList, navigation }) => {
 
     const [type, setType] = useState("regular");
     const [fields, setFields] = useState({
         listID: "",
         name: "",
-        type: "regular",
+        type: "",
         products: {},
     });
 
 
 
 
-    const fieldChangeHandler = (name, val) => {
+    const fieldChangeHandler = (name, val,type) => {
         setFields((fields) => ({
             ...fields,
             [name]: val,
+            [type]:type,
+
         }));
+console.log(fields.name);
 
     };
 
 
-    const handleAdd = (type) => {
+    // const handleAdd = (type) => {
 
-        const args = {
-            name: fields.name,
-            type,
+    //     const args = {
+    //         name: fields.name,
+    //         type,
 
-        };
-        // console.log(fields.name);
-        if (fields.name.trim() !== "") {
+    //     };
+    //     // console.log(fields.name);
+    //     if (fields.name.trim() !== "") {
 
-            addList(args);
-            if (args.type === "regular") {
-                navigation.navigate("Regular List");
+    //         addList(args);
+    //         if (args.type === "regular") {
+    //             navigation.navigate("Regular List");
 
-            }
-            else {
-                navigation.navigate("One Time List");
-            }
+    //         }
+    //         else {
+    //             navigation.navigate("One Time List");
+    //         }
+    //     }
+    //     // console.log(args.name);
+    // };
+    const handleAdd=(type)=>{
+        if(type==="onetime" && fields.name.trim()!==""){
+            addList(fields.name);
+            // addList(type);
+            navigation.navigate("ONE TIME LIST");
         }
-        // console.log(args.name);
+        
+        else if(type==="regular" && fields.name.trim()!==""){
+            addList(fields.name);
+            navigation.navigate("REGULAR LIST");
+        }
     };
+    console.log(fields.name);
+    
 
     return (
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>

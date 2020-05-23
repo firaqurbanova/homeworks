@@ -3,7 +3,7 @@ import {StyleSheet, View, Text, TextInput} from 'react-native'
 import { CustomText } from "./CustomText";
 
 
-export const CustomField=({placeholder,placeholderTextColor,style})=>{
+export const CustomField=({placeholder,placeholderTextColor,style,onChangeText})=>{
     // const[listName,setListName]=useState("")
     
     return(
@@ -11,8 +11,9 @@ export const CustomField=({placeholder,placeholderTextColor,style})=>{
 
             <TextInput 
             placeholder={placeholder}
-            placeholderTextColor={placeholderTextColor}
+            // placeholderTextColor={placeholderTextColor}
             style={styles.input} 
+            onChangeText={onChangeText}
             />
             
 
@@ -27,7 +28,7 @@ const styles=StyleSheet.create({
     },
     input:{
         marginTop:10,
-        width:340,
+        width:'91%',
         height:40,
         borderRadius:45,
         backgroundColor:"#EEEEEE",

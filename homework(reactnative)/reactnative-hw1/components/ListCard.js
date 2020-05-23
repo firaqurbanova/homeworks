@@ -9,7 +9,7 @@ export const ListCard = ({ list, onPress, onLongPress }) => {
     // const navigation = useNavigation();
     const { name, products, type } = list;
     const { bought } = list.products;
-
+    
     const productsCount = products.length;
     // let boughtProductsCount=0;
     // for( let i=0;i<productsCount;i++){
@@ -22,7 +22,11 @@ export const ListCard = ({ list, onPress, onLongPress }) => {
     const boughtProductsCount = products.filter((product) => product.bought === true).length;
 
 
-    let fill = (boughtProductsCount / productsCount) * 340;
+    let fill;
+    if(productsCount==0)
+        fill=(boughtProductsCount / 1) * 340;
+    else
+        fill=(boughtProductsCount / productsCount) * 340;
     rectangle2 = function (x) {
         return {
             width: fill,

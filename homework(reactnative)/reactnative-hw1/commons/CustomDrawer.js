@@ -96,10 +96,11 @@ const styles = StyleSheet.create({
     },
     btnWrapper: {
         paddingVertical: 7,
-        // borderRadius: 10,
+        borderRadius: 15,
         textAlign: "center",
         color: "#FF7676",
         backgroundColor: "white",
+        overflow:"hidden",
     },
 
 });
